@@ -1,6 +1,3 @@
-//
-// Created by Lakshya Mittal on 17-02-2022.
-//
 
 #include "NibbleArray.h"
 
@@ -38,7 +35,6 @@ void NibbleArray::set(const size_t pos, const uint8_t val) {
     }
 }
 
-//Get pointer to underlying array
 
 uint8_t *NibbleArray::data() {
     return this->arr.data();
@@ -52,8 +48,7 @@ size_t NibbleArray::storageSize() const {
     return this->arr.size();
 }
 
-// Move all the moves to a vector. This doubles the size, but is faster to access,
-// since there is no bitwise operation needed.
+
 
 void NibbleArray::inflate(vector<uint8_t> &dest) const {
     dest.reserve(this->size);
