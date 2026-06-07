@@ -1,10 +1,7 @@
-//
-// Created by Lakshya Mittal on 01-02-2022.
-//
+
 
 #include<bits/stdc++.h>
 #include "../Model/RubiksCube.h"
-//#include "../Model/PatternDatabase/PatternDatabase.h"
 #include "../PatternDatabases/CornerPatternDatabase.h"
 
 #ifndef RUBIKS_CUBE_SOLVER_IDASTARSOLVER_H
