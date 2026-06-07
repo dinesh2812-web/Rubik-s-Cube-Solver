@@ -1,6 +1,3 @@
-//
-// Created by Lakshya Mittal on 17-02-2022.
-//
 
 #ifndef RUBIKS_CUBE_SOLVER_PERMUTATIONINDEXER_H
 #define RUBIKS_CUBE_SOLVER_PERMUTATIONINDEXER_H
@@ -12,8 +9,7 @@ template <size_t N, size_t K = N>
 class PermutationIndexer
 {
     // Precomputed table containing the number of ones in the binary
-    // representation of each number.  The largest N-bit number is
-    // 2^N-1 = (1 << N) - 1.
+    
     array<uint32_t, (1 << N) - 1> onesCountLookup;
 
     // Precomputed table of factorials (or "picks" if N != K).  They're in
@@ -37,7 +33,7 @@ public:
     }
 
     /**
-     * Calculate the lexicographic rank (the index) of a permutation in O(n)
+     * Calculate the lexicographic rank  of a permutation in O(n)
      * complexity.
      */
     uint32_t rank(const array<uint8_t, K>& perm) const
