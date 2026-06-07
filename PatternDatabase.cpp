@@ -1,3 +1,6 @@
+//
+// Created by Lakshya Mittal on 17-02-2022.
+//
 
 #include "PatternDatabase.h"
 
@@ -11,10 +14,13 @@ PatternDatabase::PatternDatabase(const size_t size, uint8_t init_val) :
         database(size, init_val), size(size), numItems(0) {
 }
 
+// If the index is already set, it does nothing and returns false
+// Else it sets ind and returns true
 
 bool PatternDatabase::setNumMoves(const uint32_t ind, const uint8_t numMoves) {
     uint8_t oldMoves = this->getNumMoves(ind);
 
+//    New item is getting added
     if(oldMoves == 0xF){
         ++this->numItems;
     }
@@ -66,6 +72,8 @@ void PatternDatabase::toFile(const string &filePath) const {
     writer.close();
 }
 
+// Returns true of database is loaded successfully
+// else return false
 
 bool PatternDatabase::fromFile(const string &filePath) {
     ifstream reader(filePath, ios::in | ios::ate);
